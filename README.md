@@ -13,7 +13,8 @@ The structure is designed to separate raw data, notebooks, source code, manuscri
 ├─ /data/           # raw, processed, and sample datasets
 │   ├─ /raw/        # original datasets (never modified)
 │   ├─ /processed/  # cleaned or transformed datasets
-│   └─ /sample/     # lightweight / dummy data for demo, docs, or testing
+│   ├─ /sample/     # lightweight / dummy data for demo, docs, or testing
+│   └─ /external/   # external datasets referenced in this project
 ├─ /notebooks/      # exploratory and analysis notebooks (Quarto / Jupyter)
 ├─ /src/            # analysis scripts, utility modules, and reproducible pipelines
 ├─ /manuscripts/    # manuscript drafts, figures, and supplementary materials
@@ -28,6 +29,7 @@ The structure is designed to separate raw data, notebooks, source code, manuscri
 > * Keep raw data **only** in `/data/raw/` and never commit sensitive/private data to the repository.
 > * Use `/data/processed/` for cleaned or transformed datasets used by notebooks and scripts.
 > * `/data/sample/` is optional, but useful for sharing small datasets for documentation or testing.
+> * `/data/external/` can contain links or references to large datasets stored elsewhere.
 
 ---
 
