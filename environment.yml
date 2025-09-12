@@ -1,0 +1,16 @@
+name: phd-portfolio
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - jupyterlab
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - pip
+  - pip:
+      - biopython
+      - rdkit-pypi
