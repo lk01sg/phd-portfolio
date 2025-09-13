@@ -1,68 +1,96 @@
 # PhD Portfolio Repository
 
-This repository contains my research workflow, drafts, and resources for my PhD journey.
-
-The structure is designed to separate raw data, notebooks, source code, manuscripts, and documentation.
+This repository contains the research workflow, drafts, and resources for my PhD journey.
+It is structured to separate data, analysis, manuscripts, and documentation for better organization and reproducibility.
 
 ---
 
-## Repository structure
+## Directory Structure
 
 ```
 / (root)
-├─ /data/           # raw, processed, and sample datasets
-│   ├─ /raw/        # original datasets (never modified)
-│   ├─ /processed/  # cleaned or transformed datasets
-│   ├─ /sample/     # lightweight / dummy data for demo, docs, or testing
-│   └─ /external/   # external datasets referenced in this project
+├─ /data/           # datasets (raw, processed, sample, external)
+│   ├─ /raw/        # original, unmodified datasets
+│   ├─ /processed/  # cleaned and transformed datasets
+│   ├─ /sample/     # small subsets / dummy data for demos or testing
+│   └─ /external/   # external references or large datasets (not stored directly in the repo)
 ├─ /notebooks/      # exploratory and analysis notebooks (Quarto / Jupyter)
-├─ /src/            # analysis scripts, utility modules, and reproducible pipelines
-├─ /manuscripts/    # manuscript drafts, figures, and supplementary materials
-├─ /docs/           # documentation, website source for phd-portfolio (GitHub Pages)
-├─ /results/        # generated outputs: figures, tables, model checkpoints
-├─ /env/            # environment specification (environment.yml / requirements.txt)
+├─ /src/            # reusable scripts, utilities, and analysis pipelines
+├─ /manuscripts/    # drafts of papers, figures, and supplementary materials
+├─ /docs/           # documentation and website build for the PhD portfolio
+├─ /results/        # outputs generated from analysis: figures, tables, models, etc.
+├─ /env/            # environment specifications (environment.yml / requirements.txt)
 └─ README.md        # this file
 ```
 
-> Notes
->
-> * Keep raw data **only** in `/data/raw/` and never commit sensitive/private data to the repository.
-> * Use `/data/processed/` for cleaned or transformed datasets used by notebooks and scripts.
-> * `/data/sample/` is optional, but useful for sharing small datasets for documentation or testing.
-> * `/data/external/` can contain links or references to large datasets stored elsewhere.
+---
+
+## Getting Started
+
+To set up and run the repository locally:
+
+1. **Clone the repo**
+
+   ```bash
+   git clone https://github.com/lk01sg/phd-portfolio.git
+   cd phd-portfolio
+   ```
+
+2. **Set up the environment**
+
+   ```bash
+   # with conda
+   conda env create -f env/environment.yml
+   conda activate phd-portfolio
+
+   # or with pip
+   pip install -r env/requirements.txt
+   ```
+
+3. **Run notebooks / analysis**
+
+   * Exploratory notebooks are located in `/notebooks/`
+   * Example workflows: `/notebooks/example_workflow.ipynb`
+
+4. **Build documentation / site**
+
+   ```bash
+   # depending on the toolchain, e.g., Quarto or MkDocs
+   quarto render docs
+   ```
 
 ---
 
-## How I use this repo
+## Workflow
 
-* Develop experiments in `/notebooks/` and extract production-ready code into `/src/`.
-* Save reproducible outputs to `/results/` and link figures to manuscript drafts under `/manuscripts/`.
-* Use `docs/` to build the public-facing PhD portfolio site (GitHub Pages). The site is authored in Quarto/Markdown and published to `lk01sg.github.io/phd-portfolio`.
+* Initial exploration is done in `/notebooks/`; stable components are refactored into `/src/`.
+* Raw data goes into `/data/raw/`, processed datasets into `/data/processed/`.
+* Outputs such as figures, models, and tables are stored in `/results/`.
+* Drafts of papers are stored in `/manuscripts/`.
+* Documentation and the public site are built from `/docs/` and published via GitHub Pages:
+  👉 [https://lk01sg.github.io/phd-portfolio](https://lk01sg.github.io/phd-portfolio)
 
 ---
 
-## Contributing / Personal workflow
+## Current Status
 
-This repository is primarily a personal workspace, but the following conventions help keep it organized:
-
-* Notebooks should include a brief README header describing purpose, inputs, and outputs.
-* Code in `/src/` must be importable as a module and documented with docstrings.
-* Provide a `requirements.txt` or `environment.yml` in `/env/` so experiments are reproducible.
-* Use `git` feature branches for major changes and keep `main`/`master` stable.
+* 🔧 **In progress**: notebooks, drafts, and workflow refinement
+* ✅ **Stable**: folder structure, environment setup, basic documentation
+* 📅 **Last updated**: \[update date here]
 
 ---
 
 ## License & Contact
 
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+**License**: MIT License (see `LICENSE` file for details).
 
-For reuse of code or figures, please contact me at [lksingagerda@outlook.co.id](mailto:lksingagerda@outlook.co.id).
+For reuse of code, figures, or any other inquiries:
+📧 [lksingagerda@outlook.co.id](mailto:lksingagerda@outlook.co.id)
 
 ---
 
-## Quick links
+## Quick Links
 
-* Project site: `https://lk01sg.github.io/phd-portfolio`
-* Example workflow: see `/notebooks/example_workflow.ipynb`
-
-*Last updated: September 12, 2025*
+* Project site: [https://lk01sg.github.io/phd-portfolio](https://lk01sg.github.io/phd-portfolio)
+* Data documentation: `/data/README.md`
+* Example notebook workflow: `/notebooks/example_workflow.ipynb`
